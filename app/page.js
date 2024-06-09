@@ -1,7 +1,14 @@
-import Hero from "./_components/Hero";
+import React from 'react'
+import Product from './_components/Product'
+import Hero from './_components/Hero'
 
-export default function Home() {
+function page() {
   return (
-   <div><Hero/></div>
-  );
+    <div>
+      <Hero/>
+      <Product/>
+    </div>
+  )
 }
+
+export default page
