@@ -4,7 +4,7 @@ import React from "react";
 
 function ProductItem({ product }) {
   return (
-    <div className="p-1 border-teal-400 rounded-lg hover:border hover:shadow-md hover:cursor-pointer">
+    <div className="p-1 border-primary rounded-lg hover:border hover:shadow-md hover:cursor-pointer">
       <Image
         src={product?.attributes?.banner?.data?.attributes?.url}
         alt="banner-card"
