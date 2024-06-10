@@ -1,5 +1,5 @@
 import React from "react";
-import ProductItem from "./productItem";
+import ProductItem from "./ProductItem";
 
 function ProductList({ productList }) {
   return (
