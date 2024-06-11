@@ -11,7 +11,7 @@ function page() {
   const getTotalAmount = () => {
     let totalAmount = 0;
     cart.map(
-      (item) => (totalAmount += Number(item?.product?.attributes?.price))
+      (item) => (totalAmount += Number(item?.productDetails?.attributes?.price))
     );
     return totalAmount;
   };
@@ -44,28 +44,32 @@ function page() {
                 <li className="flex items-center gap-4">
                   <img
                     src={
-                      item?.product?.attributes?.banner?.data?.attributes?.url
+                      item?.productDetails?.attributes?.banner?.data?.attributes
+                        ?.url
                     }
                     alt=""
                     className="size-16 rounded object-cover"
                   />
 
                   <div>
-                    <h3 className="text-sm text-gray-900">Basic Tee 6-Pack</h3>
+                    <h3 className="text-sm text-gray-900">
+                      {" "}
+                      {item?.productDetails?.attributes?.title}
+                    </h3>
 
                     <dl className="mt-0.5 space-y-px text-[10px] text-gray-600">
                       <div>
                         <dt className="inline">Category:</dt>
                         <dd className="inline">
                           {" "}
-                          {item?.product?.attributes?.category}
+                          {item?.productDetails?.attributes?.category}
                         </dd>
                       </div>
                     </dl>
                   </div>
 
                   <div className="flex flex-1 items-center justify-end gap-2">
-                    $ {item?.product?.attributes?.price}
+                    $ {item?.productDetails?.attributes?.price}
                     <button
                       onClick={() => deleteItem(item?.id)}
                       className="text-gray-600 transition hover:text-red-600"

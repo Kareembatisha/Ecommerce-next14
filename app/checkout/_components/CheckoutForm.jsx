@@ -75,7 +75,7 @@ function CheckoutForm({ amount }) {
   const createOrder = () => {
     let productIds = [];
     cart.map((el) => {
-      productIds.push(el?.product?.id);
+      productIds.push(el?.productDetails?.id);
     });
     const data = {
       data: {
@@ -101,7 +101,7 @@ function CheckoutForm({ amount }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="mx-32 md:mx-[420px] mt-12">
+      <div className="mx-32 md:mx-[420px] mt-32">
         <PaymentElement />
         <button
           className="w-full p-2 mt-4 text-white rounded-md bg-primary"

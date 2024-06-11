@@ -7,16 +7,16 @@ function ProductItem({ product }) {
   return (
     <Link
       href={`/product-details/${product?.id}`}
-      className="p-1 border-primary rounded-lg hover:border hover:shadow-md hover:cursor-pointer"
+      className="p-1 border-primary rounded-lg hover:border hover:shadow-md hover:cursor-pointer mt-4"
     >
       <Image
         src={product?.attributes?.banner?.data?.attributes?.url}
         alt="banner-card"
         width={400}
         height={350}
-        className="rounded-t-lg h-[170px] object-cover"
+        className="rounded-t-lg h-[300px] w-auto object-cover mx-auto "
       />
-      <div className="flex items-center justify-between p-3 bg-gray-50 rounded-b-lg">
+      <div className="flex items-center justify-between p-3 bg-gray-50 rounded-b-lg ">
         <div className="">
           <h2 className="text-[12px] font-medium line-clamp-1">
             {product?.attributes?.title}
